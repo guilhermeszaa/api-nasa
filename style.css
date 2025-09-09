@@ -1,0 +1,31 @@
+nav {
+    background: #020024;
+    background: linear-gradient(359deg, rgba(2, 0, 36, 1) 100%, rgba(9, 9, 121, 1) 100%);
+}
+
+.navbar-brand {
+    color: white;
+}
+
+body {
+    background-color: #161426;
+}
+
+.header {
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
