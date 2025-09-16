@@ -1,14 +1,17 @@
 nav {
-    background: #020024;
-    background: linear-gradient(359deg, rgba(2, 0, 36, 1) 100%, rgba(9, 9, 121, 1) 100%);
+    /* background: #020024; */
+    /* background: linear-gradient(359deg, rgba(2, 0, 36, 1) 100%, rgba(9, 9, 121, 1) 100%); */
+    background-color: black;
 }
 
 .navbar-brand {
-    color: white;
+    color: black;
 }
 
 body {
-    background-color: #161426;
+    /* background-color: #161426; */
+    /* background-color: white; */
+    background-color: red;
 }
 
 .header {
@@ -19,22 +22,52 @@ body {
 
 h1 {
     font-size: 5rem;
+    text-align: left;
+    margin-left: 2rem;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 18%;
 }
 
 h2 {
     font-size: 4rem;
+    text-align: left;
+    margin-left: 2rem;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h3 {
     font-size: 2rem;
+    text-align: left;
+    margin-left: 2rem;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .nav-item a  {
-    color: white;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.Home {
-    color: white;
+a {
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.logo {
+    margin-left: 0.1rem;
 }
 
 
