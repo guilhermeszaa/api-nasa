@@ -47,31 +47,28 @@
   </div>
 </nav>
 
-  <div class="header">
-    <h1>Welcome to Nasa Wolrd</h1>
-    <h3>Here you can found many curious things about the planet and the galaxy...</h3>
-  </div>
+    <h1>Photos Of Mars (Rover Curiosity)</h1>
+  <div id="photos" class="gallery"></div>
 
-  <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
+  <script>
+    const apiKey = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; // substitua pela sua chave da NASA
+    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${apiKey}`;
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("photos");
+        
+        // Pega só 12 fotos para exibir
+        data.photos.slice(0, 12).forEach(photo => {
+          const img = document.createElement("img");
+          img.src = photo.img_src;
+          img.alt = `Foto tirada por ${photo.rover.name} com a câmera ${photo.camera.full_name}`;
+          container.appendChild(img);
+        });
+      })
+      .catch(err => console.error("Erro ao buscar fotos de Marte:", err));
+  </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>

@@ -47,31 +47,27 @@
   </div>
 </nav>
 
-  <div class="header">
-    <h1>Welcome to Nasa Wolrd</h1>
-    <h3>Here you can found many curious things about the planet and the galaxy...</h3>
-  </div>
+    <h1>Picture Of The Day</h1>
+  <div id="apod"></div>
 
-  <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
+  <script>
+    const apiKey = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; // substitua pela sua chave
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); // Mostra todos os dados no console
+        const container = document.getElementById("apod");
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
+        container.innerHTML = `
+          <h2>${data.title}</h2>
+          <img src="${data.url}" alt="${data.title}" style="margin-left: 2rem; max-width:300px;">
+          <p>${data.explanation}</p>
+        `;
+      })
+      .catch(err => console.error("Erro ao buscar a foto:", err));
+  </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
