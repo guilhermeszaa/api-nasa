@@ -53,6 +53,8 @@
     <h1>Picture Of The Day</h1>
   <div id="apod"></div>
 
+  
+
   <script>
     const apiKey = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; // substitua pela sua chave
     const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
@@ -65,7 +67,7 @@
 
         container.innerHTML = `
           <h2>${data.title}</h2>
-          <img src="${data.url}" alt="${data.title}" style="margin-left: 2rem; max-width:300px;">
+          <img src="${data.url}" alt="${data.title}" style="margin-left: 2rem; max-width:225px;">
           <p>${data.explanation}</p>
         `;
       })

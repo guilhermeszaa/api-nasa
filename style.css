@@ -190,6 +190,18 @@ p {
   margin-top: 1.5rem;
 }
 
+.carousel-inner {
+  height: 400px;
+  width: 800px;
+  align-items: center;
+  margin-left: 410px;
+}
+
+.carousel-inner img {
+  height: 500px;
+  
+}
+
 
 
 
