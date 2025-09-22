@@ -20,6 +20,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
+          <img src="./pngwing.com (4).png" alt="Ícone" width="38" height="38">
+        </li>
+        <li class="nav-item">
           <a class="nav-link" aria-current="page" href="./index.html">Home</a>
         </li>
         <li class="nav-item">
@@ -36,9 +39,9 @@
             More
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Contact</a></li>
+            <li><a class="dropdown-item" href="./contact.html">Contact</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="./aboutus.html">About Us</a></li>
             <li><hr class="dropdown-divider"></li>
           </ul>
         </li>
@@ -53,8 +56,8 @@
   <script>
     const apiKey = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; // coloque sua chave da NASA aqui
     const startDate = new Date().toISOString().split("T")[0]; // hoje
-    const endDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000) // +3 dias
-                      .toISOString().split("T")[0];
+    const endDate = new Date().toISOString().split("T")[0]; // hoje
+                      // .toISOString().split("T")[0];
 
     const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${apiKey}`;
 
@@ -75,12 +78,8 @@
 
             card.innerHTML = `
               <h3>${asteroid.name}</h3>
-              <p>📅 Data: ${date}</p>
-              <p>📏 Tamanho máx: ${size} m</p>
-              <p>🚀 Velocidade: ${velocity} km/h</p>
-              <p>🌌 Distância: ${distance} km</p>
-              <p>⚠️ Perigoso: ${asteroid.is_potentially_hazardous_asteroid ? "Sim" : "Não"}</p>
-            `;
+              <p> Data: ${date}</p>
+              <p> Velocidade: ${velocity} km/h</p>`;
 
             container.appendChild(card);
           });
