@@ -56,13 +56,13 @@
   
 
   <script>
-    const apiKey = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; // substitua pela sua chave
-    const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+    const APIKEY = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; 
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${APIKEY}`;
 
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data); // Mostra todos os dados no console
+        console.log(data); 
         const container = document.getElementById("apod");
 
         container.innerHTML = `

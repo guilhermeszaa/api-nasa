@@ -54,12 +54,12 @@
   <div id="asteroids" class="asteroids"></div>
 
   <script>
-    const apiKey = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; // coloque sua chave da NASA aqui
-    const startDate = new Date().toISOString().split("T")[0]; // hoje
-    const endDate = new Date().toISOString().split("T")[0]; // hoje
-                      // .toISOString().split("T")[0];
+    const APIKEY = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; 
+    const DATAINICIO = new Date().toISOString().split("T")[0]; 
+    const DATAFINAL = new Date().toISOString().split("T")[0];
+      
 
-    const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${apiKey}`;
+    const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${DATAINICIO}&end_date=${DATAFINAL}&api_key=${APIKEY}`;
 
     fetch(url)
       .then(response => response.json())

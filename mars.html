@@ -54,8 +54,8 @@
   <div id="photos" class="gallery"></div>
 
   <script>
-    const apiKey = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; // substitua pela sua chave da NASA
-    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${apiKey}`;
+    const APIKEY = "1HWsdW0VHsyeccz4Mt22PMRaIpnErPmhufEOQcS5"; 
+    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${APIKEY}`;
 
     fetch(url)
       .then(response => response.json())
